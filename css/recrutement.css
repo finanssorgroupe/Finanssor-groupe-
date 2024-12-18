@@ -1,0 +1,46 @@
+/* Styles spécifiques pour le formulaire de recrutement */
+.formulaire-recrutement {
+    background: white; /* Couleur de fond */
+    padding: 20px; /* Espacement interne */
+    border-radius: 8px; /* Bords arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre discrète */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrage des éléments */
+    max-width: 500px; /* Largeur maximale */
+    margin: 2rem auto; /* Centrage et espacement autour du formulaire */
+}
+
+.formulaire-recrutement h2 {
+    color: #333; /* Couleur du texte pour le titre */
+    margin-bottom: 20px; /* Espacement sous le titre */
+}
+
+.formulaire-recrutement label {
+    display: block;
+    margin-bottom: 10px; /* Espacement sous chaque label */
+    color: #333; /* Couleur du texte pour les labels */
+}
+
+.formulaire-recrutement input[type="text"],
+.formulaire-recrutement input[type="email"],
+.formulaire-recrutement input[type="file"],
+.formulaire-recrutement input[type="submit"] {
+    width: 100%; /* Pleine largeur */
+    padding: 10px; /* Confort de tapage */
+    margin-bottom: 15px; /* Espacement entre les champs */
+    border: 1px solid #ccc; /* Bordure subtile */
+    border-radius: 4px; /* Bords légèrement arrondis */
+}
+
+.formulaire-recrutement input[type="submit"] {
+    background-color: #007BFF; /* Couleur de fond du bouton */
+    color: white; /* Texte blanc */
+    border: none;
+    cursor: pointer; /* Curseur pointeur pour indiquer l'action */
+    transition: background-color 0.3s; /* Transition douce pour le survol */
+}
+
+.formulaire-recrutement input[type="submit"]:hover {
+    background-color: #0056b3; /* Couleur plus foncée au survol */
+}

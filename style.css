@@ -1,0 +1,361 @@
+/* Reset and base styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background-color: rgba(0, 76, 153, 0.5); /* Light navy blue with transparency */
+    height: 100%;
+    
+}
+
+/* Header and Navigation */
+header {
+    display: flex;
+    flex-direction: column; /* Ensures vertical stacking of nav and hero section */
+    align-items: center;
+    width: 100%;
+   
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    background: #f8f8f8;
+    padding: 10px 20px;
+    
+}
+
+#logo {
+    height: 80px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background: inherit;
+}
+
+nav li {
+    position: relative;
+    padding: 10px 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+nav .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f8f8f8;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+nav li:hover > .submenu {
+    display: block;
+}
+
+nav .submenu li {
+    padding: 5px;
+    white-space: nowrap;
+}
+
+nav .submenu a {
+    color: #666;
+}
+
+
+
+.hero {
+    position: relative;
+    background: url('/assets/aesthetic-blue-background-handmade-experimental-art.jpg') no-repeat center center / cover;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 50px 20px; /* Adjust padding as needed */
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+
+.hero h1 {
+    font-size: 2.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Slider and Slides */
+.slider, .slide {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide {
+    height: 300px; /* Adjust height as needed */
+    background-size: cover;
+    background-position: center;
+    transform: rotate(-10deg); /* Rotates the slide background */
+    opacity: 0.5; /* Setting initial opacity for the slide, not just the img */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide:hover {
+    opacity: 1; /* Full opacity on hover */
+}
+
+.slide img {
+    opacity: 0.5; /* 70% opacity makes images less harsh */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide img:hover {
+    opacity: 1; /* Returns to full opacity when hovered */
+}
+
+/* Phone number animation */
+#phone-number {
+    font-size: 18px;
+    color: #007BFF;
+    transition: color 0.5s ease-in-out;
+    animation: phoneAnim 10s infinite ease-in-out;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.flex-item:nth-child(odd) {
+    flex-direction: row;
+    background-color: #007BFF;  /* Example background color for odd items */
+}
+
+.flex-item:nth-child(even) {
+    flex-direction: row-reverse;
+    background-color: #0056A6;  /* Example background color for even items */
+}
+
+.text-content, .image-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.flex-item img {
+    width: 100%;
+    max-width: 400px; /* Limit size to not overpower the text */
+    height: auto;
+}
+.button-link {
+    text-decoration: none; /* Removes underline from links */
+}
+
+.button-link button {
+    background-color: #007BFF; /* Example button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-link button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #FF5722; /* Example button color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #E64A19;
+}
+
+/* General Styles for Pre-Footer and Footer */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.section, .footer-column {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Pre-Footer Styles */
+.pre-footer {
+    background-color: #f8f8f8; /* Light gray background */
+    display: flex;
+    justify-content: space-between;
+}
+
+.pre-footer .section {
+    margin-right: 20px; /* Spacing between sections */
+}
+
+.pre-footer .section:last-child {
+    margin-right: 0; /* No margin on the right for the last section */
+}
+
+.pre-footer h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.pre-footer p {
+    margin-bottom: 20px;
+}
+
+.pre-footer button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pre-footer button:hover {
+    background-color: #003875;
+}
+
+/* Footer Styles */
+/* Footer base styles */
+footer {
+    background-color: #002244; /* Dark blue background, adjust color as necessary */
+    color: white;
+    padding: 20px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: start; /* Aligns items at the start of the container */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Styles for each footer column */
+footer .footer-column {
+    flex: 1; /* Each column takes equal space */
+    padding: 0 15px; /* Padding on sides for spacing */
+}
+
+footer h4 {
+    margin-bottom: 20px; /* Space below the column title */
+}
+
+footer ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease-in-out;
+}
+
+footer ul li a:hover {
+    color: #FFCC00; /* Gold color on hover, adjust as necessary */
+}
+
+footer img {
+    width: 50px; /* Fixed width for logos */
+    height: 50px; /* Fixed height for logos */
+    margin-top: 10px; /* Space above the logo */
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footer-column {
+        margin-bottom: 20px; /* Space between columns when stacked */
+    }
+
+    footer .footer-column:last-child {
+        margin-bottom: 0; /* No bottom margin for the last column */
+    }
+}
+
+
+
+
+@keyframes phoneAnim {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+        color: #007BFF;
+    }
+    25% {
+        transform: scale(1.1) rotate(-10deg);
+        color: #FF5733;
+    }
+    50% {
+        transform: scale(1.2) rotate(10deg);
+        color: #33C3F0;
+    }
+    75% {
+        transform: scale(1.1) rotate(-5deg);
+        color: #FFC300;
+    }
+}
