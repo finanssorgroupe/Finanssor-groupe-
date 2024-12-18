@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Recrutements en cours</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/recrutement.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     <!-- Assurez-vous d'avoir ce fichier de style -->
+</head>
+<body>
+    
+    <h1>Recrutements en cours</h1>
+    <div class="search-filters">
+        <input type="text" placeholder="Mots-clés" name="keyword">
+        <input type="text" placeholder="Lieu du poste" name="location">
+        <select name="category">
+            <option selected>Selectionner une option</option>
+            <option value="animation">Animation</option>
+            <option value="commercial">Commercial</option>
+            <option value="merchandising">Merchandising</option>
+        </select>
+        <button onclick="search()">Rechercher</button>
+    </div>
+    <div class="job-listings" id="jobListings"></div>
+    <script src="/scripts/recrutement.js"></script>
+    
+</body>
+</html>

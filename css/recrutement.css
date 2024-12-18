@@ -1,46 +1,100 @@
-/* Styles spécifiques pour le formulaire de recrutement */
-.formulaire-recrutement {
-    background: white; /* Couleur de fond */
-    padding: 20px; /* Espacement interne */
-    border-radius: 8px; /* Bords arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre discrète */
+/* Styles de base et structure de la page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrage des éléments */
-    max-width: 500px; /* Largeur maximale */
-    margin: 2rem auto; /* Centrage et espacement autour du formulaire */
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
 }
 
-.formulaire-recrutement h2 {
-    color: #333; /* Couleur du texte pour le titre */
-    margin-bottom: 20px; /* Espacement sous le titre */
+.container {
+    width: 90%;
+    max-width: 1100px; /* Ajustez selon la largeur souhaitée */
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.formulaire-recrutement label {
-    display: block;
-    margin-bottom: 10px; /* Espacement sous chaque label */
-    color: #333; /* Couleur du texte pour les labels */
+h1 {
+    text-align: center;
+    color: #333;
+    width: 100%; /* Assure que le titre est centré dans le conteneur */
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
-.formulaire-recrutement input[type="text"],
-.formulaire-recrutement input[type="email"],
-.formulaire-recrutement input[type="file"],
-.formulaire-recrutement input[type="submit"] {
-    width: 100%; /* Pleine largeur */
-    padding: 10px; /* Confort de tapage */
-    margin-bottom: 15px; /* Espacement entre les champs */
-    border: 1px solid #ccc; /* Bordure subtile */
-    border-radius: 4px; /* Bords légèrement arrondis */
+/* Styles pour les filtres de recherche */
+.search-filters {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 0 20px; /* Ajout de padding pour aligner avec les éléments de job-listings */
 }
 
-.formulaire-recrutement input[type="submit"] {
-    background-color: #007BFF; /* Couleur de fond du bouton */
-    color: white; /* Texte blanc */
+.search-filters input, .search-filters select {
+    flex: 1; /* Permet à chaque élément de prendre tout l'espace disponible */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-filters button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
     border: none;
-    cursor: pointer; /* Curseur pointeur pour indiquer l'action */
-    transition: background-color 0.3s; /* Transition douce pour le survol */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.formulaire-recrutement input[type="submit"]:hover {
-    background-color: #0056b3; /* Couleur plus foncée au survol */
+.search-filters button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles pour la liste des jobs */
+.job-listings {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.job {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.job:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.job button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.job button:hover {
+    background-color: #218838;
 }
