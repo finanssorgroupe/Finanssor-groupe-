@@ -65,20 +65,20 @@ h1 {
 
 /* Styles pour la liste des jobs */
 .job-listings {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Trois colonnes de largeur égale */
+    gap: 20px; /* Espacement entre les cases */
+    margin-top: 20px;
 }
 
 .job {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
     display: flex;
+    flex-direction: column; /* Stack les éléments verticalement */
     justify-content: space-between;
-    align-items: center;
 }
 
 .job:hover {
@@ -97,4 +97,7 @@ h1 {
 
 .job button:hover {
     background-color: #218838;
+}
+.job-title, .job-location, .job-posted {
+    margin: 5px 0; /* Espacement uniforme */
 }

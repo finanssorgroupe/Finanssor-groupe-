@@ -13,3 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
         index = (index + 1) % titles.length;
     }, 5000);
 });
+document.querySelector('.carousel-slide').addEventListener('mouseover', function() {
+    this.style.animationPlayState = 'paused';
+});
+
+document.querySelector('.carousel-slide').addEventListener('mouseout', function() {
+    this.style.animationPlayState = 'running';
+});

@@ -6,6 +6,7 @@ body, html {
     overflow-x: hidden;
     background-color: rgba(0, 76, 153, 0.5); /* Light navy blue with transparency */
     height: 100%;
+    font-size: 28px;
     
 }
 
@@ -29,7 +30,7 @@ header {
 }
 
 #logo {
-    height: 80px;
+    height: 100px;
 }
 
 nav ul {
@@ -219,6 +220,67 @@ button:hover {
     background-color: #E64A19;
 }
 
+
+/*Carousel*/
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% / 3)); /* Changez ici pour que l'animation soit fluide */
+    }
+}
+
+.carousel-section{
+    text-align: center;
+   
+}
+.carousel-container {
+    
+    margin: 0 20px;
+}
+.carousel-title {
+    /* Taille du titre */
+    font-weight: bold; /* Rend le titre en gras */
+    margin-bottom: 30px; /* Espace entre le titre et le carousel */
+    color:#333 ; /* Couleur spécifique du titre */
+}
+
+.carousel-description {
+    font-size: 24px; /* Taille de la description */
+    margin-top: 30px; /* Espace entre le carousel et la description */
+    color: #333; /* Couleur douce pour la description */
+    max-width: 800px; /* Contrôle la largeur de la description */
+    margin-left: auto; /* Centrage horizontal de la description */
+    margin-right: auto; /* Centrage horizontal de la description */
+    line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
+}
+
+.carousel-slide {
+    display: flex;
+    will-change: transform; /* Optimise les performances pour les animations */
+    animation: scroll 20s linear infinite; /* Ralentit l'animation et la rend infinie */
+}
+
+.carousel-slide img:hover {
+    transform: scale(1.1); /* Agrandit l'image au survol */
+    cursor: pointer;
+    opacity: 1; /* Rend l'image entièrement opaque au survol */
+}
+
+
+
+.carousel-slide img {
+    width: 200px;  /* Définit la largeur des images */
+    height: 200px; /* Définit la hauteur des images pour faire des carrés */
+    flex-shrink: 0;
+    object-fit: cover; /* Assure que l'image couvre la zone sans déformation */
+    margin: 10px; /* Ajoute un peu d'espace autour des images */
+    transition: transform 0.5s ease-in-out;
+    border-radius: 10px;
+}
+
+
 /* General Styles for Pre-Footer and Footer */
 .container {
     max-width: 1200px;
@@ -231,42 +293,7 @@ button:hover {
     padding: 20px;
 }
 
-/* Pre-Footer Styles */
-.pre-footer {
-    background-color: #f8f8f8; /* Light gray background */
-    display: flex;
-    justify-content: space-between;
-}
 
-.pre-footer .section {
-    margin-right: 20px; /* Spacing between sections */
-}
-
-.pre-footer .section:last-child {
-    margin-right: 0; /* No margin on the right for the last section */
-}
-
-.pre-footer h3 {
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.pre-footer p {
-    margin-bottom: 20px;
-}
-
-.pre-footer button {
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.pre-footer button:hover {
-    background-color: #003875;
-}
 
 /* Footer Styles */
 /* Footer base styles */
@@ -322,24 +349,6 @@ footer img {
     margin-top: 10px; /* Space above the logo */
 }
 
-/* Responsive behavior */
-@media (max-width: 768px) {
-    footer .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    footer .footer-column {
-        margin-bottom: 20px; /* Space between columns when stacked */
-    }
-
-    footer .footer-column:last-child {
-        margin-bottom: 0; /* No bottom margin for the last column */
-    }
-}
-
-
-
 
 @keyframes phoneAnim {
     0%, 100% {
@@ -357,5 +366,23 @@ footer img {
     75% {
         transform: scale(1.1) rotate(-5deg);
         color: #FFC300;
+    }
+}
+
+
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footer-column {
+        margin-bottom: 20px; /* Space between columns when stacked */
+    }
+
+    footer .footer-column:last-child {
+        margin-bottom: 0; /* No bottom margin for the last column */
     }
 }
