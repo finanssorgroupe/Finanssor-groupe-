@@ -24,13 +24,14 @@ header {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    background: #f8f8f8;
+    background: #bae1ef;
     padding: 10px 20px;
     
 }
 
 #logo {
     height: 100px;
+    border-radius: 10px;
 }
 
 nav ul {
@@ -149,13 +150,7 @@ button:hover {
     opacity: 1; /* Returns to full opacity when hovered */
 }
 
-/* Phone number animation */
-#phone-number {
-    font-size: 18px;
-    color: #007BFF;
-    transition: color 0.5s ease-in-out;
-    animation: phoneAnim 10s infinite ease-in-out;
-}
+
 
 .container {
     width: 100%;
@@ -296,78 +291,141 @@ button:hover {
 
 
 /* Footer Styles */
-/* Footer base styles */
 footer {
-    background-color: #002244; /* Dark blue background, adjust color as necessary */
-    color: white;
-    padding: 20px 0;
-}
-
-footer .container {
+    display: grid;
+    grid-template-rows: 0.6fr 6rem auto;
+    grid-template-areas:  "." "footer";
+    overflow-x: hidden;
+    background: #F5F7FA;
+    min-height: 60vh;
+    font-family: "Open Sans", sans-serif;
+  }
+  footer .footer {
+    z-index: 1;
+    --footer-background:#555aed;
+    display: grid;
+    position: relative;
+    grid-area: footer;
+    min-height: 7rem;
+  }
+  footer .footer .bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0.6rem;
+    background: var(--footer-background);
+    filter: url("#blob");
+  }
+  footer .footer .bubbles .bubble {
+    position: absolute;
+    left: var(--position, 50%);
+    background: var(--footer-background);
+    border-radius: 100%;
+    -webkit-animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+            animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+    transform: translate(-50%, 100%);
+  }
+  footer .footer .content {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
-    align-items: start; /* Aligns items at the start of the container */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Styles for each footer column */
-footer .footer-column {
-    flex: 1; /* Each column takes equal space */
-    padding: 0 15px; /* Padding on sides for spacing */
-}
-
-footer h4 {
-    margin-bottom: 20px; /* Space below the column title */
-}
-
-footer ul {
-    list-style-type: none; /* Removes bullet points */
-    padding: 0;
-    margin: 0;
-}
-
-footer ul li {
-    margin-bottom: 10px; /* Space between list items */
-}
-
-footer ul li a {
+    align-items: start;
+    z-index: 2;
+    padding: 2rem;
+    background: var(--footer-background);
+  }
+  footer .footer .content a, body .footer .content p {
+    color: #F5F7FA;
+    text-decoration: none;
+  }
+  footer .footer .content b {
     color: white;
-    text-decoration: none; /* Removes underline */
-    transition: color 0.3s ease-in-out;
+  }
+  footer .footer .content p {
+    margin: 0;
+    font-size: 0.75rem;
+  }
+  footer .footer .content > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer .footer .content > div > div {
+    margin: 0.25rem 0;
+  }
+  footer .footer .content > div > div > * {
+    margin-right: 0.5rem;
+  }
+  footer .footer .content > div .image {
+    align-self: center;
+    width: 3rem;
+    height: 2rem;
+    margin: 1rem 0;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+  }
+  
+  
+footer .contact-info p {
+    margin: 5px 0;  /* Espacement entre les lignes de contact */
+    color: #F5F7FA; /* Couleur des textes de contact */
+}
+footer .contact-info, footer .map {
+    flex-grow: 1;
+    flex-basis: 0; /* Démarre sans prendre de base prédéterminée */
+     margin: 0 20px;
 }
 
-footer ul li a:hover {
-    color: #FFCC00; /* Gold color on hover, adjust as necessary */
-}
-
-footer img {
-    width: 50px; /* Fixed width for logos */
-    height: 50px; /* Fixed height for logos */
-    margin-top: 10px; /* Space above the logo */
+footer .map iframe {
+    width: 100%; /* Assure que la carte s'adapte à la div */
+    max-width: 300px; /* Largeur maximale de la carte */
+    height: 200px; /* Hauteur de la carte */
+   border-radius: 20px;
 }
 
 
-@keyframes phoneAnim {
-    0%, 100% {
-        transform: scale(1) rotate(0deg);
-        color: #007BFF;
+  @-webkit-keyframes bubble-size {
+    0%, 75% {
+      width: var(--size, 4rem);
+      height: var(--size, 4rem);
     }
-    25% {
-        transform: scale(1.1) rotate(-10deg);
-        color: #FF5733;
+    100% {
+      width: 0rem;
+      height: 0rem;
     }
-    50% {
-        transform: scale(1.2) rotate(10deg);
-        color: #33C3F0;
+  }
+  
+  @keyframes bubble-size {
+    0%, 75% {
+      width: var(--size, 4rem);
+      height: var(--size, 4rem);
     }
-    75% {
-        transform: scale(1.1) rotate(-5deg);
-        color: #FFC300;
+    100% {
+      width: 0rem;
+      height: 0rem;
     }
-}
+  }
+  @-webkit-keyframes bubble-move {
+    0% {
+      bottom: -2rem;
+    }
+    100% {
+        bottom: calc(var(--distance, 5rem) * 0.4);
+    }
+  }
+  @keyframes bubble-move {
+    0% {
+      bottom: -4rem;
+    }
+    100% {
+      bottom: var(--distance, 10rem);
+    }
+  }
+
+
+
+
 
 
 
@@ -385,4 +443,14 @@ footer img {
     footer .footer-column:last-child {
         margin-bottom: 0; /* No bottom margin for the last column */
     }
+    footer .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .content > * {
+        margin-bottom: 20px; /* Ajoute un espace entre les éléments sur les petits écrans */
+    }
 }
+
+    
