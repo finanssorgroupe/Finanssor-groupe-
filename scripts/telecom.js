@@ -1,10 +1,3 @@
-
-document.querySelectorAll('.feature').forEach(item => {
-    item.addEventListener('mouseenter', () => {
-        item.style.backgroundColor = '#e8f0fe'; // Changement de fond lors du survol
-    });
-    item.addEventListener('mouseleave', () => {
-        item.style.backgroundColor = 'white'; // Retour au fond initial après survol
-    });
-});
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:1783acf61afe47a560db89f35ea84b9dd32d67990e5ad7cbc23e83ae25cdc90b
+size 355

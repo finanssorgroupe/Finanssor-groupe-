@@ -1,6 +1,3 @@
-
-    document.getElementById('form').onsubmit = function() {
-        // Vous pouvez ajouter ici des validations JavaScript si nécessaire
-        return confirm('Êtes-vous sûr de vouloir soumettre ce formulaire ?');
-    };
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:ef6007adcfbebbffbc1813d3237d11f9183051bcbc59789c85fdb7e58205ddd0
+size 232

@@ -1,22 +1,3 @@
-.key-figures {
-    margin: 50px 0;
-    display: flex;
-    justify-content: space-around; /* Ensures even spacing */
-    padding: 40px 20px; /* More padding for better visual separation */
-    background-color: #0056A6; /* Consistent with design theme */
-    color: white;
-    text-align: center;
-    border-radius: 30px;;
-}
-.figure {
-    margin: 0 10px; /* Additional margin for separation */
-}
-
-.figure h2 {
-    font-size: 2em; /* Larger font size for visibility */
-    margin-bottom: 0.5em; /* Space between the number and text */
-}
-
-.figure p {
-    font-size: 1.2em; /* Slightly larger text for readability */
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:da459c5e9fdf30c8ed3c6485d2c3b28bbb5c63dfc5bbf5f25f02f9b92446e1d5
+size 5882

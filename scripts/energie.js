@@ -1,15 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("animate");
-            }
-        });
-    }, {
-        threshold: 0.5 // 50% de l'élément doit être visible avant l'animation
-    });
-
-    document.querySelectorAll('.animate-on-scroll').forEach((section) => {
-        observer.observe(section);
-    });
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:0ea303d6007e280727932e0439f3837730521994ae874ea4de62e77d371c29e3
+size 513

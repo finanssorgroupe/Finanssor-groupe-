@@ -1,14 +1,3 @@
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("slide");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    slides[slideIndex-1].style.display = "block";  
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d10741e1c26e4fce78e7574477032329f8603f5c748424f2bd587187909413a6
+size 430
